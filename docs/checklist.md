@@ -27,7 +27,7 @@ _Tài liệu này dùng để theo dõi các đầu việc (Tasks) cần hoàn t
 - [x] Nâng cấp thiết kế Premium (Glassmorphism, Google Fonts, Background Gradient)
 - [ ] Chạy Stylelint kiểm tra chuẩn SCSS
 
-## Giai đoạn 4: Triển khai (Deployment) - _Đang thực hiện_
+## Giai đoạn 4: Triển khai (Deployment) - _Hoàn thành_
 
-- [/] Đẩy mã nguồn lên nền tảng GitHub
-- [ ] Triển khai (Deploy) giao diện lên GitHub Pages hoặc Vercel để lấy Link Live
+- [x] Đẩy mã nguồn lên nền tảng GitHub (Link: https://github.com/Cherrykill/survey-form-premium)
+- [x] Triển khai (Deploy) giao diện lên GitHub Pages để lấy Link Live: https://cherrykill.github.io/survey-form-premium/src/
