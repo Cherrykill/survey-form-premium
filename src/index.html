@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Đăng Ký Khoá Học</title>
+    <!-- Nhúng Font Poppins từ Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <h1 id="title">Form Đăng Ký Khoá Học</h1>
+      <p id="description">
+        Vui lòng điền thông tin của bạn vào biểu mẫu dưới đây
+      </p>
+
+      <!-- Trai tim cua the nay  -->
+      <form action="" id="survery-form">
+        <!-- Nhom thong tin email  -->
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Vi du: abc@gmail.com..."
+            autocomplete="on"
+            required
+          />
+        </div>
+
+        <!-- Nhom thong tin Ho va Ten  -->
+        <div class="form-group">
+          <label for="name" id="name-label">Ho va Ten</label>
+          <!-- Them pattern (Chi cho phep nhap chu cai va khoang trang, it nhat 3 ky tu) -->
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Nguyen Van A"
+            pattern="[A-Za-zÀ-ỹ\s]{3,}"
+            title="Vui long nhap ten that, it nhat 3 ky tu chu"
+            required
+          />
+        </div>
+
+        <!-- Nhom thong tin age  -->
+        <div class="form-group">
+          <label id="number-label" for="age">Tuoi</label>
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="10"
+            max="99"
+            placeholder="Tuoi:23"
+          />
+        </div>
+
+        <!-- Nhom thong tin: Chon muc tieu hoc  -->
+        <div class="form-group">
+          <label id="dropdown">Ban muon hoc mang nao?</label>
+          <!-- The select tao menu tha xuong  -->
+          <select name="" id="dropdown" name="role" required>
+            <!-- The option la cac lua chon ben trong menu  -->
+            <option disabled selected value>Chọn mục tiêu của bạn</option>
+            <option value="frontend">Lap trinh Fron-tend</option>
+            <option value="backend">Lap trinh Back-end</option>
+            <option value="fullstack">Lap trinh Full-stack</option>
+            <option value="other">Khac</option>
+          </select>
+        </div>
+
+        <!-- Nhom thong tin: Ban biet khoa hoc qua dau  -->
+        <div class="form-group">
+          <p>Ban biet den khoa hoc qua dau</p>
+          <label for="">
+            <input
+              type="radio"
+              name="source"
+              value="facebook"
+              class="input-radio"
+              checked
+            />
+            Facebook
+          </label>
+          <label for="">
+            <input
+              type="radio"
+              name="source"
+              value="friend"
+              class="input-radio"
+            />
+            Ban be gioi thieu
+          </label>
+          <label for="">
+            <input
+              type="radio"
+              name="source"
+              value="search"
+              class="input-radio"
+            />
+            Tim kiem Google
+          </label>
+        </div>
+
+        <!-- Nhom thong tin so thich  -->
+        <div class="form-group">
+          <p>Ban thich hoc ky thuat nao duoi day (chon nhieu)</p>
+          <label for="">
+            <input
+              type="checkbox"
+              name="skills"
+              id=""
+              value="html"
+              class="input-checkbox"
+            />Thiet ke Web (HTML/CSS)
+          </label>
+          <label for="">
+            <input
+              type="checkbox"
+              name="skills"
+              id=""
+              value="js"
+              class="input-checkbox"
+            />Lam logic (Javascript)
+          </label>
+          <label for="">
+            <input
+              type="checkbox"
+              name="skills"
+              id=""
+              value="database"
+              class="input-checkbox"
+            />Quan ly co so du lieu (SQL)
+          </label>
+        </div>
+
+        <!-- Nhom thong tin ghi chu them  -->
+        <div class="form-group">
+          <label for="comments">Nhung dieu ban muon chia se them</label>
+          <textarea
+            name="comments"
+            rows="5"
+            placeholder="Ghi chu cua ban..."
+            id=""
+          ></textarea>
+        </div>
+
+        <!-- Nut bam gui Form  -->
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Gui Dang Ky
+          </button>
+        </div>
+
+        <!-- Chung ta se them cac o nhap lieu vao day o buoc sau  -->
+      </form>
+    </main>
+  </body>
+</html>

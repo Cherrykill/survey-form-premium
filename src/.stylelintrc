@@ -1,0 +1,86 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss"
+  ],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "order/properties-order": [
+
+      {
+        "groupName": "Positioning",
+        "properties": [
+          "position",
+          "top",
+          "right",
+          "bottom",
+          "left",
+          "z-index"
+        ]
+      },
+
+      {
+        "groupName": "Display & Flex",
+        "properties": [
+          "display",
+          "flex",
+          "flex-direction",
+          "flex-wrap",
+          "justify-content",
+          "align-items",
+          "gap"
+        ]
+      },
+
+      {
+        "groupName": "Box Model",
+        "properties": [
+          "width",
+          "height",
+          "max-width",
+          "min-width",
+          "margin",
+          "padding",
+          "border",
+          "border-radius"
+        ]
+      },
+
+      {
+        "groupName": "Typography",
+        "properties": [
+          "font",
+          "font-size",
+          "font-weight",
+          "line-height",
+          "text-align",
+          "color"
+        ]
+      },
+
+      {
+        "groupName": "Visual",
+        "properties": [
+          "background",
+          "background-color",
+          "box-shadow",
+          "opacity"
+        ]
+      },
+
+      {
+        "groupName": "Animation",
+        "properties": [
+          "transition",
+          "transform",
+          "animation"
+        ]
+      }
+    ],
+
+    "color-function-notation": null,
+    "alpha-value-notation": null,
+    "selector-class-pattern": null,
+    "no-descending-specificity": null
+  }
+}

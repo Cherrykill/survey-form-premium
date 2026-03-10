@@ -1,0 +1,146 @@
+/* 1. KHAI BAO BIEN MAU SAC  */
+$bg-body: #f4f4f9;
+$text-base: #333;
+$color-brand: #007bff;
+$color-border: #ccc;
+
+// 2. CSS RESET CO BAN
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif; // Dùng font Poppins mới nhúng
+  background: linear-gradient(
+    135deg,
+    #667eea 0%,
+    #764ba2 100%
+  ); // Nền Gradient tím xanh cực đẹp
+  background-attachment: fixed; // Giữ nền đứng yên khi cuộn
+  min-height: 100vh;
+  display: flex;
+  align-items: center; // Căn giữa form theo chiều dọc
+  justify-content: center; // Căn giữa form theo chiều ngang
+  color: $text-base;
+  line-height: 1.6;
+}
+
+// 3. LONG GHEP CSS (NESTING)
+main {
+  max-width: 600px;
+  width: 90%; // Để đảm bảo trên mobile không bị tràn
+  margin: 20px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.85); // Nền trắng trong suốt
+  backdrop-filter: blur(10px); // Hiệu ứng kính mờ (Glassmorphism) cực sang
+  border-radius: 15px; // Bo tròn sâu hơn cho hiện đại
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); // Bóng đổ sâu hơn
+}
+
+// h1 va p nam trong main
+h1,
+p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+// Cac thanh phan form nam trong main
+form {
+  // Nhom label + input nam trong form
+  .form-group {
+    margin-bottom: 15px;
+
+    // p nam trong form-group (Cau hoi cua file checkbox)
+    p {
+      font-size: 16px;
+      margin-bottom: 5px;
+      text-align: left; // De lai gach center o tren
+    }
+
+    // label nay nam trong form-group
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    // Meo long ghep: Khi label BEN TRONG co chua nut radio/checkbox
+    label:has(.input-radio),
+    label:has(.input-checkbox) {
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+  }
+  // Cac o chu nam trong form
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $color-border;
+    border-radius: 4px;
+    font-size: 16px;
+    background: white;
+    font-family: inherit; // Bat texarea dung chung font chu cho ca web
+
+    // Them hieu ung chuyen dong muot ma trong 0.3s
+    transition:
+      border-color 0.3s ease,
+      box-shadow 0.3s ease; // Sửa lỗi thiếu chữ 's'
+
+    // Ky tu "&" dai dien cho chinh the cha chua no
+    // No dich ra la khi tao (input/select) bi hover vao...""
+    &:focus {
+      border-color: $color-brand;
+      outline: none;
+      // Them anh hao quang mau xanh nhat toa ra ngoai (Box-shadow)
+      box-shadow: 0 0 0 3px rgba($color-brand, 0.2);
+    }
+
+    // Nut bam tron vuong nam trong form
+    .input-radio,
+    .input-checkbox {
+      display: inline-block;
+      margin-right: 5px;
+      min-width: 15px;
+      min-height: 15px;
+    }
+  }
+
+  // Nut gui trong form
+  .submit-button {
+    display: block; // Bien nut thanh mot khoi
+    width: 100%;
+    padding: 12px;
+    background: $color-brand;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s; // Tạo hiệu ứng đổi màu mượt mà trong 0.3 giây
+
+    // Khi nguoi ta re chuot len nut
+    &:hover {
+      background-color: darken(
+        $color-brand,
+        15%
+      ); //Ham SCSS: Lam cai bien mau xanh kia toi di 15%
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    margin: 20px 10px; // Cach tren duoi 20px, cach trai phai 10px de khong dinh sat vien dien thoai
+    padding: 15px; // Bop lop dem ben trong lai mot ty cho thon gon form
+    h1 {
+      font-size: 24px; // Sửa font-style thành font-size
+    }
+  }
+}
