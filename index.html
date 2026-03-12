@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bang Gia Dich Vu</title>
+    <title>SaaS Pro - Supercharge Your Workflow</title>
     <!-- Nhúng Font Poppins từ Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,49 +14,39 @@
     <link rel="stylesheet" href="./src/style.css" />
   </head>
 
-  <body>
-    <section class="pricing-section">
-      <header class="pricing-header">
-        <h1>Chon Goi Dich Vu Phu Hop</h1>
-        <p>Giai phap toi uu cho nhu cau phat trien</p>
-      </header>
-
-      <div class="pricing-container">
-        <!-- The gia 1: Co ban  -->
-        <article class="pricing-card">
-          <h2>Co ban</h2>
-          <div class="price">9$<span>/thang</span></div>
-          <ul class="features">
-            <li>1 Du an duy nhat</li>
-            <li>Ho tro cong dong</li>
-            <li>Su dung vinh vien</li>
-          </ul>
-          <button class="btn">Bat dau ngay</button>
-        </article>
-
-        <!-- The gia 2: Chuyen nghiep (Noi bat) -->
-        <article class="pricing-card">
-          <div class="badge">Pho bien nhat</div>
-          <h2>Chuyen nghiep</h2>
-          <div class="price">29$<span>/thang</span></div>
-          <ul class="features">
-            <li>Du an khong gioi han</li>
-            <li>Ho tro 24/7</li>
-            <li>Toi uu toc do cao</li>
-          </ul>
-          <button class="btn btn-primary">Dung thu mien phi</button>
-        </article>
-
-        <article class="pricing-card">
-          <h2>Doanh nghiep</h2>
-          <div class="price">99$<span>/thang</span></div>
-          <ul class="features">
-            <li>Tat ca tinh nang</li>
-            <li>Quan ly doi nhom</li>
-            <li>Bao mat da lop</li>
-          </ul>
-        </article>
-      </div>
-    </section>
+  <body class="dark-theme">
+    <!-- 1. THANH ĐIỀU HƯỚNG (NAVIGATION) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">SaaS<span>Pro</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#features">Tính năng</a></li>
+                <li><a href="#pricing">Bảng giá</a></li>
+                <li><a href="#" class="btn-nav">Dùng thử</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- 2. HERO SECTION -->
+    <header class="hero" id="home">
+        <div class="container hero-wrapper">
+            <!-- Bên trái: Nội dung chữ -->
+            <div class="hero-content">
+                <span class="sub-title">Sẵn sàng cho kỷ nguyên mới</span>
+                <h1>Nâng tầm <span>Hiệu suất</span> công việc của bạn</h1>
+                <p>Giải pháp quản lý thông minh giúp đội ngũ của bạn làm việc nhanh hơn, hiệu quả hơn và không bỏ lỡ bất kỳ cơ hội nào.</p>
+                <div class="hero-btns">
+                    <a href="#" class="btn btn-primary">Bắt đầu ngay</a>
+                    <a href="#" class="btn btn-outline">Xem bản Demo</a>
+                </div>
+            </div>
+            <!-- Bên phải: Hình ảnh/Minh họa -->
+            <div class="hero-image">
+                <!-- Tạm thời dùng một tấm ảnh minh họa chất lượng cao -->
+                <img src="./assets/images/img_dashboard_visual.png" alt="Dashboard Illustration">
+            </div>
+        </div>
+    </header>
+    <!-- (Dưới đây sẽ là phần Pricing Table bạn đã làm, chúng ta sẽ lắp vào sau) -->
   </body>
 </html>
