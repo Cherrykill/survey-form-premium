@@ -1,13 +1,20 @@
 # Tiến Độ Dự Án (Project Checklist)
 
-_Tài liệu này dùng để theo dõi các đầu việc (Tasks) cần hoàn thành trong dự án theo phong cách Agile/Scrum cơ bản._
+> [!IMPORTANT]
+> **Kim chỉ nam:** Mỗi dự án nhỏ này (Form, Pricing Table, Hero Section...) đều được thiết kế như một **Module độc lập**. Sau khi hoàn thành các mảnh ghép, chúng ta sẽ lắp ghép tất cả lại thành một dự án **SaaS Landing Page** hoàn chỉnh và chuyên nghiệp.
 
-## Giai đoạn 1: Khởi tạo (Setup)
+## Dự Án 2: Modern Pricing Table (Module: Billing)
 
 - [x] Tạo cấu trúc thư mục chuẩn (`src/`, `docs/`, `tests/`)
 - [x] Thiết lập SCSS Watcher compiling sang CSS
 - [x] Viết file `README.md` tài liệu dự án
-- [x] Khởi tạo `.gitignore`
+
+## Dự Án 3: Hero Section (Module: Identity)
+
+- [ ] Thiết lập bố cục Flexbox cho Header
+- [ ] Tạo hiệu ứng Text Gradient cho tiêu đề
+- [ ] Làm Mobile Menu (Hamburger)
+- [ ] Tích hợp hiệu ứng vào dự án tổng thể
 
 ## Giai đoạn 2: Phát triển tính năng (Features)
 

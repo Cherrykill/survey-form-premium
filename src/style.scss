@@ -1,10 +1,11 @@
-/* 1. KHAI BAO BIEN MAU SAC  */
-$bg-body: #f4f4f9;
-$text-base: #333;
-$color-brand: #007bff;
-$color-border: #ccc;
+// 1. VARIABLES
+$color-bg: #f8f9fa;
+$color-white: #fff;
+$color-primary: #6c5ce7;
+$color-text-dark: #2d3436;
+$color-text-light: #636e72;
 
-// 2. CSS RESET CO BAN
+// 2. RESET
 * {
   padding: 0;
   margin: 0;
@@ -12,135 +13,172 @@ $color-border: #ccc;
 }
 
 body {
-  font-family: "Poppins", sans-serif; // Dùng font Poppins mới nhúng
-  background: linear-gradient(
-    135deg,
-    #667eea 0%,
-    #764ba2 100%
-  ); // Nền Gradient tím xanh cực đẹp
-  background-attachment: fixed; // Giữ nền đứng yên khi cuộn
-  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: $color-bg;
+  color: $color-text-dark;
   display: flex;
-  align-items: center; // Căn giữa form theo chiều dọc
-  justify-content: center; // Căn giữa form theo chiều ngang
-  color: $text-base;
-  line-height: 1.6;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-// 3. LONG GHEP CSS (NESTING)
-main {
-  max-width: 600px;
-  width: 90%; // Để đảm bảo trên mobile không bị tràn
-  margin: 20px auto;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.85); // Nền trắng trong suốt
-  backdrop-filter: blur(10px); // Hiệu ứng kính mờ (Glassmorphism) cực sang
-  border-radius: 15px; // Bo tròn sâu hơn cho hiện đại
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); // Bóng đổ sâu hơn
-}
+// 3.
+.pricing-section {
+  max-width: 1100px;
+  width: 100%;
 
-// h1 va p nam trong main
-h1,
-p {
-  text-align: center;
-  margin-bottom: 20px;
-}
+  .pricing-header {
+    text-align: center;
+    margin-bottom: 50px;
 
-// Cac thanh phan form nam trong main
-form {
-  // Nhom label + input nam trong form
-  .form-group {
-    margin-bottom: 15px;
-
-    // p nam trong form-group (Cau hoi cua file checkbox)
-    p {
-      font-size: 16px;
-      margin-bottom: 5px;
-      text-align: left; // De lai gach center o tren
-    }
-
-    // label nay nam trong form-group
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-
-    // Meo long ghep: Khi label BEN TRONG co chua nut radio/checkbox
-    label:has(.input-radio),
-    label:has(.input-checkbox) {
-      font-weight: normal;
+    h1 {
+      font-size: 2.5rem;
       margin-bottom: 10px;
     }
-  }
-  // Cac o chu nam trong form
-  input[type="text"],
-  input[type="email"],
-  input[type="number"],
-  select,
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid $color-border;
-    border-radius: 4px;
-    font-size: 16px;
-    background: white;
-    font-family: inherit; // Bat texarea dung chung font chu cho ca web
 
-    // Them hieu ung chuyen dong muot ma trong 0.3s
-    transition:
-      border-color 0.3s ease,
-      box-shadow 0.3s ease; // Sửa lỗi thiếu chữ 's'
-
-    // Ky tu "&" dai dien cho chinh the cha chua no
-    // No dich ra la khi tao (input/select) bi hover vao...""
-    &:focus {
-      border-color: $color-brand;
-      outline: none;
-      // Them anh hao quang mau xanh nhat toa ra ngoai (Box-shadow)
-      box-shadow: 0 0 0 3px rgba($color-brand, 0.2);
-    }
-
-    // Nut bam tron vuong nam trong form
-    .input-radio,
-    .input-checkbox {
-      display: inline-block;
-      margin-right: 5px;
-      min-width: 15px;
-      min-height: 15px;
-    }
-  }
-
-  // Nut gui trong form
-  .submit-button {
-    display: block; // Bien nut thanh mot khoi
-    width: 100%;
-    padding: 12px;
-    background: $color-brand;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s; // Tạo hiệu ứng đổi màu mượt mà trong 0.3 giây
-
-    // Khi nguoi ta re chuot len nut
-    &:hover {
-      background-color: darken(
-        $color-brand,
-        15%
-      ); //Ham SCSS: Lam cai bien mau xanh kia toi di 15%
+    p {
+      color: $color-text-light;
     }
   }
 }
 
-@media screen and (max-width: 600px) {
-  main {
-    margin: 20px 10px; // Cach tren duoi 20px, cach trai phai 10px de khong dinh sat vien dien thoai
-    padding: 15px; // Bop lop dem ben trong lai mot ty cho thon gon form
-    h1 {
-      font-size: 24px; // Sửa font-style thành font-size
+// Day la chiec hop than ky chua 3 cai the
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; // Khoang cach giua cac the la 20px
+  flex-wrap: wrap;
+
+  //   PHAN MOI GO TU DAY
+  .pricing-card {
+    background-color: $color-white;
+    padding: 40px 30px;
+    text-align: center;
+    flex: 1; // Chia deu chieu rong
+    max-width: 350px;
+    min-width: 280px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    position: relative; //De ty nua dat cai Badge "Pho bien"
+
+    &:hover {
+      transform: translateY(-10px); //Bay len mot chut khi di chuot
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: $color-text-light;
+    }
+
+    .price {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: $color-primary;
+
+      span {
+        font-size: 1rem;
+        color: $color-text-light;
+        font-weight: 400;
+      }
+    }
+
+    // Danh sach tinh nang
+    .features {
+      list-style: none;
+      margin-bottom: 30px;
+      text-align: left;
+
+      li {
+        margin-bottom: 12px;
+        color: $color-text-light;
+
+        // Them dau tich xanh cho chuyen nghiep
+        &::before {
+          content: "✔";
+          color: $color-primary;
+          margin-right: 10px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  // 4. STYLE CHO NÚT BẤM (BUTTON)
+  .btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: auto;
+    border-radius: 10px;
+    border: 2px solid $color-primary;
+    background: transparent;
+    color: $color-primary;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+
+    &.btn-primary {
+      background-color: $color-primary;
+      color: $color-white;
+
+      &:hover {
+        background-color: darken($color-primary, 10%);
+        border-color: darken($color-primary, 10%);
+      }
+    }
+  }
+
+  // 5. HIỆU ỨNG THẺ NỔI BẬT (FEATURED)
+  &.featured {
+    transform: scale(1.05);
+    border: 2px solid $color-primary;
+    z-index: 10;
+
+    &:hover {
+      transform: scale(1.05) translateY(-10px);
+    }
+
+    .badge {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $color-primary;
+      color: $color-white;
+      padding: 5px 20px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// 6. RESPONSIVE (MOBILE)
+@media (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+
+    .pricing-card.featured {
+      transform: scale(1);
+      order: -1;
+
+      &:hover {
+        transform: translateY(-10px);
+      }
     }
   }
 }

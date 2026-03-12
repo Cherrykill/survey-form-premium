@@ -1,4 +1,4 @@
-/* 1. KHAI BAO BIEN MAU SAC  */
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -7,113 +7,142 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  background-attachment: fixed;
-  min-height: 100vh;
+  background-color: #f8f9fa;
+  color: #2d3436;
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: #333;
-  line-height: 1.6;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-main {
-  max-width: 600px;
-  width: 90%;
-  margin: 20px auto;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+.pricing-section {
+  max-width: 1100px;
+  width: 100%;
 }
-
-h1,
-p {
+.pricing-section .pricing-header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
-
-form .form-group {
-  margin-bottom: 15px;
-}
-form .form-group p {
-  font-size: 16px;
-  margin-bottom: 5px;
-  text-align: left;
-}
-form .form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-form .form-group label:has(.input-radio),
-form .form-group label:has(.input-checkbox) {
-  font-weight: normal;
+.pricing-section .pricing-header h1 {
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
-form input[type=text],
-form input[type=email],
-form input[type=number],
-form select,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  background: white;
-  font-family: inherit;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-form input[type=text]:focus,
-form input[type=email]:focus,
-form input[type=number]:focus,
-form select:focus,
-form textarea:focus {
-  border-color: #007bff;
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
-}
-form input[type=text] .input-radio,
-form input[type=text] .input-checkbox,
-form input[type=email] .input-radio,
-form input[type=email] .input-checkbox,
-form input[type=number] .input-radio,
-form input[type=number] .input-checkbox,
-form select .input-radio,
-form select .input-checkbox,
-form textarea .input-radio,
-form textarea .input-checkbox {
-  display: inline-block;
-  margin-right: 5px;
-  min-width: 15px;
-  min-height: 15px;
-}
-form .submit-button {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-form .submit-button:hover {
-  background-color: rgb(0, 86.1, 178.5);
+.pricing-section .pricing-header p {
+  color: #636e72;
 }
 
-@media screen and (max-width: 600px) {
-  main {
-    margin: 20px 10px;
-    padding: 15px;
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.pricing-container .pricing-card {
+  background-color: #fff;
+  padding: 40px 30px;
+  text-align: center;
+  flex: 1;
+  max-width: 350px;
+  min-width: 280px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+.pricing-container .pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+.pricing-container .pricing-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #636e72;
+}
+.pricing-container .pricing-card .price {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #6c5ce7;
+}
+.pricing-container .pricing-card .price span {
+  font-size: 1rem;
+  color: #636e72;
+  font-weight: 400;
+}
+.pricing-container .pricing-card .features {
+  list-style: none;
+  margin-bottom: 30px;
+  text-align: left;
+}
+.pricing-container .pricing-card .features li {
+  margin-bottom: 12px;
+  color: #636e72;
+}
+.pricing-container .pricing-card .features li::before {
+  content: "✔";
+  color: #6c5ce7;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.pricing-container .btn {
+  width: 100%;
+  padding: 15px;
+  margin-top: auto;
+  border-radius: 10px;
+  border: 2px solid #6c5ce7;
+  background: transparent;
+  color: #6c5ce7;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.pricing-container .btn:hover {
+  background-color: #6c5ce7;
+  color: #fff;
+}
+.pricing-container .btn.btn-primary {
+  background-color: #6c5ce7;
+  color: #fff;
+}
+.pricing-container .btn.btn-primary:hover {
+  background-color: rgb(67.9090909091, 47.5454545455, 224.4545454545);
+  border-color: rgb(67.9090909091, 47.5454545455, 224.4545454545);
+}
+.pricing-container.featured {
+  transform: scale(1.05);
+  border: 2px solid #6c5ce7;
+  z-index: 10;
+}
+.pricing-container.featured:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+.pricing-container.featured .badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #6c5ce7;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
   }
-  main h1 {
-    font-size: 24px;
+  .pricing-container .pricing-card.featured {
+    transform: scale(1);
+    order: -1;
+  }
+  .pricing-container .pricing-card.featured:hover {
+    transform: translateY(-10px);
   }
 }
 
