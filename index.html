@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SaaS Pro - Supercharge Your Workflow</title>
-    <!-- Nhúng Font Poppins từ Google Fonts -->
+    <!-- Nhúng Font Inter từ Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./src/style.css" />
@@ -17,36 +17,87 @@
   <body class="dark-theme">
     <!-- 1. THANH ĐIỀU HƯỚNG (NAVIGATION) -->
     <nav class="navbar">
-        <div class="container">
-            <div class="logo">SaaS<span>Pro</span></div>
-            <ul class="nav-links">
-                <li><a href="#home">Trang chủ</a></li>
-                <li><a href="#features">Tính năng</a></li>
-                <li><a href="#pricing">Bảng giá</a></li>
-                <li><a href="#" class="btn-nav">Dùng thử</a></li>
-            </ul>
-        </div>
+      <div class="container">
+        <div class="logo">SaaS<span>Pro</span></div>
+        <ul class="nav-links">
+          <li><a href="#home">Trang chủ</a></li>
+          <li><a href="#features">Tính năng</a></li>
+          <li><a href="#pricing">Bảng giá</a></li>
+          <li><a href="#" class="btn-nav">Dùng thử</a></li>
+        </ul>
+      </div>
     </nav>
     <!-- 2. HERO SECTION -->
     <header class="hero" id="home">
-        <div class="container hero-wrapper">
-            <!-- Bên trái: Nội dung chữ -->
-            <div class="hero-content">
-                <span class="sub-title">Sẵn sàng cho kỷ nguyên mới</span>
-                <h1>Nâng tầm <span>Hiệu suất</span> công việc của bạn</h1>
-                <p>Giải pháp quản lý thông minh giúp đội ngũ của bạn làm việc nhanh hơn, hiệu quả hơn và không bỏ lỡ bất kỳ cơ hội nào.</p>
-                <div class="hero-btns">
-                    <a href="#" class="btn btn-primary">Bắt đầu ngay</a>
-                    <a href="#" class="btn btn-outline">Xem bản Demo</a>
-                </div>
-            </div>
-            <!-- Bên phải: Hình ảnh/Minh họa -->
-            <div class="hero-image">
-                <!-- Tạm thời dùng một tấm ảnh minh họa chất lượng cao -->
-                <img src="./assets/images/img_dashboard_visual.png" alt="Dashboard Illustration">
-            </div>
+      <div class="container hero-wrapper">
+        <!-- Bên trái: Nội dung chữ -->
+        <div class="hero-content">
+          <span class="sub-title">Sẵn sàng cho kỷ nguyên mới</span>
+          <h1>Nâng tầm <span>Hiệu suất</span> công việc của bạn</h1>
+          <p>
+            Giải pháp quản lý thông minh giúp đội ngũ của bạn làm việc nhanh
+            hơn, hiệu quả hơn và không bỏ lỡ bất kỳ cơ hội nào.
+          </p>
+          <div class="hero-btns">
+            <a href="#" class="btn btn-primary">Bắt đầu ngay</a>
+            <a href="#" class="btn btn-outline">Xem bản Demo</a>
+          </div>
         </div>
+        <!-- Bên phải: Hình ảnh/Minh họa -->
+        <div class="hero-image">
+          <!-- Tạm thời dùng một tấm ảnh minh họa chất lượng cao -->
+          <img
+            src="./assets/images/img_dashboard_visual.png"
+            alt="Dashboard Illustration"
+          />
+        </div>
+      </div>
     </header>
+
+    <!-- 3. FEATURES SECTION  -->
+    <section class="features" id="features">
+      <div class="container">
+        <!-- Tieu de cua phan nay  -->
+        <div class="section-header">
+          <span class="sub-title">Tai sao chon chung toi</span>
+          <h2>Cong cu manh me cho <span>doi nhom hien tai</span></h2>
+        </div>
+
+        <!-- Luot 3 the tinh nang (CSS Grid) -->
+        <div class="features-grid">
+          <!-- The 1  -->
+          <div class="feature-card">
+            <div class="icon">⚡</div>
+            <h3>Hieu suat vuot troi</h3>
+            <p>
+              Xử lý hàng nghìn tác vụ đồng thời không giật lag, tối ưu hoàn toàn
+              cho quy trình làm việc của bạn.
+            </p>
+          </div>
+
+          <!-- The 2  -->
+          <div class="feature-card">
+            <div class="icon">🔒</div>
+            <h3>Bao mat tuyet doi</h3>
+            <p>
+              Ma hoa dau cuoi, xac thuc hai lop va tuan thu tieu chuan ISO 27001
+              de giu lieu luon an toan.
+            </p>
+          </div>
+
+          <!-- The 3  -->
+          <div class="feature-card">
+            <div class="icon">☁️</div>
+            <h3>Đồng bộ đám mây</h3>
+            <p>
+              Truy cập mọi lúc, mọi nơi. Dữ liệu đồng bộ thời gian thực trên tất
+              cả thiết bị của bạn.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- (Dưới đây sẽ là phần Pricing Table bạn đã làm, chúng ta sẽ lắp vào sau) -->
   </body>
 </html>

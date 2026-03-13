@@ -9,12 +9,17 @@
 - [x] Thiết lập SCSS Watcher compiling sang CSS
 - [x] Viết file `README.md` tài liệu dự án
 
-## Dự Án 3: Hero Section (Module: Identity)
+## Dự Án 3: Hero Section (Module: Identity) - [x]
+- [x] Thiết lập bố cục Flexbox cho Header
+- [x] Tạo hiệu ứng Text Gradient cho tiêu đề
+- [x] Hoàn thiện Typography (Font Inter 800)
+- [x] Làm thanh điều hướng Glassmorphism Fixed
 
-- [ ] Thiết lập bố cục Flexbox cho Header
-- [ ] Tạo hiệu ứng Text Gradient cho tiêu đề
-- [ ] Làm Mobile Menu (Hamburger)
-- [ ] Tích hợp hiệu ứng vào dự án tổng thể
+## Dự Án 4: Features Section (Module: Value Prop)
+- [ ] Thiết kế lưới (Grid) 3 cột chuyên nghiệp
+- [ ] Tạo hiệu ứng Hover phát sáng (Glow effect) cho Card
+- [ ] Tích hợp hệ thống Icon đồng bộ
+- [ ] Tối ưu Responsive cho thiết bị bảng và di động
 
 ## Giai đoạn 2: Phát triển tính năng (Features)
 

@@ -1,5 +1,5 @@
 // 1. VARIABLES (DARK MODE PREMIUM)
-$dark-obisidian: #0f172a;
+$dark-obsidian: #0f172a;
 $dark-card: #1e293b;
 $color-primary: #8b5cf6; // Tím Neon
 $color-secondary: #06b6d4; // Xanh Cyan
@@ -7,7 +7,7 @@ $color-white: #f8fafc;
 $color-text-dim: #94a3b8;
 $glass-bg: rgba(15, 23, 43, 0.8);
 
-// 2. RESSET & BASE (SETUP BASIC)
+// 2. RESET & BASE (SETUP BASIC)
 * {
   padding: 0;
   margin: 0;
@@ -19,15 +19,20 @@ html {
 }
 
 body {
-  font-family: "Poppins", serif;
-  background-color: $dark-obisidian;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  background-color: $dark-obsidian;
   color: $color-white;
-  line-height: 1.6;
-  overflow-x: hidden; // Tranh bi tran thanh cuon ngang
+  line-height: 1.5;
+  overflow-x: hidden;
 }
 
 // UTILITY (Lop dung chung)
 .container {
+  width: 100%; // BẮT BUỘC: Không có dòng này, max-width không có tác dụng
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -70,25 +75,27 @@ body {
 // NAVBAR (Hieu ung kinh mo)
 .navbar {
   height: 80px;
-  display: flex;
-  align-items: center;
-  position: fixed; // Co dinh tren dau khi cuon
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   background: $glass-bg;
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
+  // Container bên trong làm bố cục logo <-- --> menu
   .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; // Đẩy logo sang trái, menu sang phải
     align-items: center;
+    height: 100%;
+    // max-width và margin: 0 auto kế thừa từ .container global
   }
 
   .logo {
     font-size: 1.5rem;
     font-weight: 700;
+    flex-shrink: 0; // Không cho logo bị bóp nhỏ
 
     span {
       color: $color-primary;
@@ -155,17 +162,19 @@ body {
     }
 
     h1 {
-      font-size: 3.5rem;
-      line-height: 1.2;
+      font-size: 4rem; // Tăng cỡ chữ lên một chút cho Inter đẹp hơn
+      line-height: 1.1;
       margin-bottom: 25px;
-      font-weight: 700;
-    }
+      font-weight: 800; // Inter cực đẹp ở weight 800
 
-    // Hieu ung chu doi mau Gradient
-    span {
-      background: linear-gradient(to right, $color-primary, $color-secondary);
-      -webkit-text-fill-color: transparent; //làm chữ trong suốt
-      -webkit-background-clip: text; //background nằm trong hình dạng chữ
+      // Hieu ung chu doi mau Gradient
+      span {
+        display: inline-block; // Tránh việc gradient bị gãy khi từ xuống dòng
+        background: linear-gradient(to right, $color-primary, $color-secondary);
+        -webkit-text-fill-color: transparent; //làm mau goc cua chữ trong suốt
+        -webkit-background-clip: text; //background nằm trong hình dạng chữ
+        background-clip: text;
+      }
     }
   }
 
@@ -191,6 +200,92 @@ body {
     max-width: 100%;
     border-radius: 20px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    border: 1px solid rbga(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+// 5. SECTION HEADER (Dung chung cho moi section)
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+
+  .sub-title {
+    display: inline-block;
+    color: $color-secondary;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px; //Khoang cach giua cac chu
+    font-size: 0.85rem; // Thêm đơn vị rem - thiếu đơn vị thì trình duyệt bỏ qua
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+
+    span {
+      display: inline-block;
+      background: linear-gradient(to right, $color-primary, $color-secondary);
+      -webkit-background-clip: text; //Lam background trong hinh dang chu
+      -webkit-text-fill-color: transparent; // Lam cho mau goc cua chu trong suot
+      background-clip: text;
+    }
+  }
+}
+
+// 6. FEATURES SECTION
+.features {
+  padding: 100px 0;
+}
+
+// Luoi 3 cac bang CSS Grid
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+// Style cua tung the tinh nang
+.feature-card {
+  background: $dark-card;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 40px 30px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px); // Bay len nhe
+    border-color: rgba($color-primary, 0.5);
+    box-shadow: 0 20px 40px rgba($color-primary, 0.15);
+  }
+
+  .icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    display: inline-flex; // Phai la flex thi align-items/justify-content moi hoat dong
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: rgba($color-primary, 0.15);
+    border-radius: 12px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: $color-text-dim;
+  }
+}
+
+@media (max-width:900px){
+  .features-grid{
+    grid-template-columns: 1fr;
   }
 }
