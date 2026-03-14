@@ -284,8 +284,86 @@ body {
   }
 }
 
-@media (max-width:900px){
-  .features-grid{
+@media (max-width: 900px) {
+  .features-grid {
     grid-template-columns: 1fr;
   }
 }
+
+/* 7. TESTIMONTALS SECTION  */
+.testimonials {
+  padding: 100px 0;
+  background-color: $dark-card; // Xen ke mau de trang gay dep
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: $dark-obsidian;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 35px 30px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba($color-secondary, 0.1); // Glow mau Cyan
+    border-color: rgba($color-secondary, 0.4);
+  }
+
+  .stars {
+    color: #f59e0b;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+  }
+
+  .quote {
+    color: $color-text-dim;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-style: italic;
+  }
+
+  .author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, $color-primary, $color-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      flex-shrink: 0; // khong cho avatar bi bop nho
+    }
+
+    h4{
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    span{
+      font-size: 0.8rem;
+      color: $color-text-dim;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/*# sourceMappingURL=style.css.map */
